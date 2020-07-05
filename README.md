@@ -6,4 +6,20 @@ Details of how to build and run the benchmark may be found in the ARCHER reposit
 
 For the purposes of scoring in procurements, the important result is the performance in nanoseconds/day.
 
-The most recent version of GROMACS installed on our services is 2019.4
+The most recent version of GROMACS installed on our services is 2020.1, built with Intel compiler, MPI and MKL 2019.
+
+# Results
+
+Results for a run on 4 nodes from an ARC cluster (48 cores/node):
+
+```
+gmx_mpi mdrun -s nsteps800.tpr -deffnm nc2-cubic-md -ntomp 1 -dlb yes -noconfout -npme 72 
+```
+
+```
+               Core t (s)   Wall t (s)        (%)
+       Time:    75349.454      392.447    19199.9
+                 (ns/day)    (hour/ns)
+Performance:        0.353       68.048
+
+```
