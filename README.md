@@ -23,3 +23,5 @@ gmx_mpi mdrun -s nsteps800.tpr -deffnm nc2-cubic-md -ntomp 1 -dlb yes -noconfout
 Performance:        0.353       68.048
 
 ```
+
+Result `0.353 ns/day`
